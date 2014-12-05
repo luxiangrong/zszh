@@ -1,0 +1,92 @@
+.indexDiv{height:500px; width:100%; overflow:hidden; position:relative;}
+.indexDiv .bigImg{position:relative; display:none;}
+.indexDiv .bigImg img{width:100%;}
+.indexDiv h1{position:absolute; z-index:10; left:0px; top:0px; width:100%; text-align:center; font-size:12px; font-weight:400;}
+.indexDiv h1 div{padding:100px 0 30px 0;}
+
+.indexPart1{background:#000; z-index:30;}
+.indexPart1 ul{width:110%;}
+.indexPart1 li{float:left; width:180px; height:180px; overflow:hidden; position:relative;}
+
+.indexImg{position:fixed; z-index:50; left:50%; margin-left:-361px; top:240px;}
+
+#indexBtn a{display:block; width:74px; height:74px; background:url(../image/ico1.png) center no-repeat; position:absolute; z-index:20; top:50%;}
+#indexBtn .li_01 a{left:50%; margin-left:-440px; margin-top:100px;}
+#indexBtn .li_02 a{background:url(../image/ico2.png) center no-repeat; right:50%; margin-right:-300px; margin-top:-100px;}
+#indexBtn .li_03 a{background:url(../image/ico4.png) center no-repeat; right:50%; margin-right:-500px; margin-top:100px;}
+
+.indexBtn li{position:absolute; z-index:50; background:url(../image/indexBtn.png) left top no-repeat; width:176px; height:64px; text-align:center; padding-top:8px; display:none;}
+
+.law{padding:90px 0 180px 0; width:996px;}
+.law h1{height:68px; line-height:68px; overflow:hidden; background:url(../image/lawT.png) left top no-repeat; text-align:center; color:#FE7E01; font-weight:400;}
+.law .content{padding:50px 60px; text-align:justify; line-height:2em; background:url(../image/law.png) left repeat-y;}
+.law .bg{background:url(../image/lawB.png); height:28px;}
+
+.contact{background:url(../image/contact.png) left top no-repeat; height:453px; overflow:hidden; color:#FFF; font-size:14px; line-height:1.6em;}
+.contact .imgDiv{width:377px; height:277px; overflow:hidden;}
+.contact .imgDiv div{text-align:center; padding-top:110px;}
+.contact .content{width:620px; height:277px; overflow:hidden;}
+.contact .content div{padding:45px 35px 0;}
+.contact .msg{width:688px; height:113px; overflow:hidden;}
+.contact .msg div{padding:20px 35px 0;}
+.contact .mail{width:309px; height:113px; overflow:hidden;}
+.contact .mail div{font-size:18px; padding:45px 0 0 75px;}
+.contact .address{width:997px; height:60px; line-height:60px; text-indent:35px; overflow:hidden;}
+
+.about{text-align:center;}
+
+.businessTab{height:230px; padding-top:50px; overflow:hidden; background:#ebe9e8;}
+.businessTab .wal{width:900px;}
+.businessTab li{float:left; width:225px; text-align:center; overflow:hidden; font-size:18px;}
+.businessTab a{display:block; height:230px; overflow:hidden;}
+.businessTab a div{height:155px; width:150px; margin:0 auto; overflow:hidden; position:relative;}
+.businessTab a img{position:absolute; left:0px; top:0px;}
+.businessTab a{color:#666;}
+.businessTab a:hover{color:#f57d07;}
+
+.Business_1{background:#948f98 url(../image/Business_1.jpg) center top no-repeat; height:503px; width:100%; overflow:hidden; position:relative;}
+.Business_1 .imgDiv{position:absolute; top:75px; right:50px;}
+.Business_1 .name{font-size:24px; color:#FFF; line-height:130px; position:absolute; top:155px; width:150%; left:-25%;}
+.Business_1 .nameNow{width:250px; left:50%; margin-left:-500px;}
+
+.Business_2{height:626px; width:100%; overflow:hidden; position:relative; background:#eee;}
+.Business_2 .bg{height:626px; width:100%; position:absolute; z-index:1; left:0px; top:0px; background:url(../image/Business_2.jpg) right top no-repeat;}
+.Business_2 .name{font-size:24px; line-height:130px; position:absolute; z-index:10; top:240px; width:150%; right:-25%;}
+.Business_2 .nameNow{width:250px; right:50%; margin-right:-500px;}
+.Business_2 .list{padding-top:82px; position:relative; z-index:2;}
+.Business_2 .list li{height:123px; overflow:hidden; position:relative; padding-left:186px; color:#666;}
+.Business_2 .list .ico{position:absolute; left:80px; top:0px;}
+.Business_2 .list h1{color:#F57D07; padding:13px 0;}
+.Business_2 .list a{color:#F57D07;}
+
+.Business_3{height:400px; width:100%; overflow:hidden; background:#948e98; position:relative;}
+.Business_3 .bg{height:400px; width:100%; position:absolute; z-index:1; left:0px; top:0px; background:url(../image/Business_3.jpg) left top no-repeat;}
+.Business_3 .name{font-size:24px; color:#FFF; line-height:130px; position:absolute; z-index:10; top:125px; width:150%; left:-25%;}
+.Business_3 .nameNow{width:250px; left:50%; margin-left:-500px;}
+.Business_3 .list{position:relative; z-index:2;}
+.Business_3 .list li{float:left; height:145px; padding-right:35px; overflow:hidden;}
+.Business_3 .list .fr{padding:70px 0 0 390px;}
+
+.Business_4{height:500px; width:100%; overflow:hidden; background:#eee; position:relative;}
+.Business_4 .bg{height:500px; width:100%; position:absolute; z-index:1; left:0px; top:0px; background:url(../image/Business_4.jpg) right top no-repeat;}
+.Business_4 .name{font-size:24px; line-height:130px; position:absolute; z-index:10; top:175px; width:150%; right:-25%;}
+.Business_4 .nameNow{width:250px; right:50%; margin-right:-500px;}
+.Business_4 .list{padding-top:150px; width:640px; position:relative; z-index:1;}
+.Business_4 .list li{float:left; height:130px; padding-right:35px; overflow:hidden;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
