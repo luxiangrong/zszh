@@ -1,4 +1,14 @@
 $(function(){
+	var parseToMatrix = function(str) {
+		console.log(str);
+		var reg = /^matrix\((-?\d+),\s*(-?\d+),\s*(-?\d+),\s*(-?\d+),\s*(-?\d+),\s*(-?\d+)\)$/;
+		var matches = str.match(reg);
+		if($.isArray( matches) && matches.length == 7) {
+			matches.splice(0,1);
+			return matches;
+		}
+		return [0,0,0,0,0,0];
+	};
 	//--首页(复杂特效)
 	if($('.indexDiv').length>0){
 		indexDivFun();
@@ -12,8 +22,22 @@ $(function(){
 				}else{
 					$('.indexImg').fadeIn(500);
 					}
-			$('.indexDiv').each(function(i){
-				$(this).find('h1').css('top',($(window).scrollTop()-$(this).offset().top)/2+200);
+			$('.indexDiv h1').each(function(i){
+				// $(this).find('h1').css('top',($(window).scrollTop()-$(this).offset().top)/2+200);
+				// if('-webkit-transform' in document.documentElement.style) {
+					// var translate3dY = ($(window).scrollTop() - parseToMatrix($(this).css('-webkit-transform'))[5])/2 + 200;
+					// $(this).css(
+						// '-webkit-transform', 'translate3d(0px, ' + translate3dY + 'px, 0px)'
+					// );
+// 					
+				// }
+				if('transform' in document.documentElement.style) {
+					console.log(parseToMatrix($(this).css('transform')));
+					var translate3dY = ($(window).scrollTop() - $(this).offset().top)/2 +200;
+					$(this).css(
+						'transform', 'translate3d(0px, ' + translate3dY + 'px, 0px)'
+					);
+				}
 				})
 			})	
 		}
