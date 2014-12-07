@@ -27,6 +27,7 @@
 	</head>
 
 	<body>
+		<img src="image/limg1440_6.jpg" style="position: fixed; width: 100%; height: 100%; z-index: -1" />
 		<div class="nav">
 			<div class="wal">
 				<div class="fl">
@@ -53,7 +54,144 @@
 		<div class="h60"></div>
 
 		<div class="wal" style="padding-top:170px;">
-			<div class="about" id="about"></div>
+			<div class="about" id="about">
+				<table class="event" data-year="2010" data-month="5">
+					<tbody>
+						<tr>
+							<td class="icon">
+								<img src="image/compony_01.png" />
+							</td>
+							<td class="description">
+								掌上纵横公司成立，<br/>创立业务品牌
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="event" data-year="2011" data-month="5">
+					<tbody>
+						<tr>
+							<td class="icon">
+								<img src="image/compony_02.png" />
+							</td>
+							<td class="description">
+								签约中影集团影视版权<br/>手游独家战略合作伙伴
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="event" data-year="2011" data-month="7">
+					<tbody>
+						<tr>
+							<td class="icon">
+								<img src="image/compony_03.png" />
+							</td>
+							<td class="description">
+								签约腾讯游戏影视版权<br/>手游独家战略合作伙伴
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="event" data-year="2012" data-month="12">
+					<tbody>
+						<tr>
+							<td class="icon">
+								<img src="image/compony_04.png" />
+							</td>
+							<td class="description">
+								签约星皓国际《大闹天宫3D》
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="event" data-year="2013" data-month="1">
+					<tbody>
+						<tr>
+							<td class="icon">
+								<img src="image/compony_05.png" />
+							</td>
+							<td class="description">
+								签约《兰陵王》
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="event" data-year="2013" data-month="3">
+					<tbody>
+						<tr>
+							<td class="icon">
+								<img src="image/compony_06.png" />
+							</td>
+							<td class="description">
+								签约小马奔腾<br/>授权《范冰冰魔范学院》全球唯一运营商
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="event" data-year="2013" data-month="9">
+					<tbody>
+						<tr>
+							<td class="icon">
+								<img src="image/compony_07.png" />
+							</td>
+							<td class="description">
+								与360签约独家战略合作伙伴
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="event" data-year="2014" data-month="1">
+					<tbody>
+						<tr>
+							<td class="icon">
+								<img src="image/compony_08.png" />
+							</td>
+							<td class="description">
+								与百度游戏签约<br/>独家战略合作伙伴
+								<br/><br/>
+								签约《琅琊榜》
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="event" data-year="2014" data-month="2">
+					<tbody>
+						<tr>
+							<td class="icon">
+								<img src="image/compony_09.png" />
+							</td>
+							<td class="description">
+								签约37游戏独家战略合作伙伴
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="event" data-year="2014" data-month="4">
+					<tbody>
+						<tr>
+							<td class="icon">
+							</td>
+							<td class="description">
+								签约韩庚
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<table class="event" data-year="2014" data-month="6">
+					<tbody>
+						<tr>
+							<td class="icon">
+								<img src="image/compony_10.png" />
+							</td>
+							<td class="description">
+								《天将雄狮》
+								<br/><br/>
+								签约百变大咖
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="clear_f"></div>
 		</div>
 
 		<div class="footDiv">
@@ -89,53 +227,127 @@
 				</div>
 			</div>
 		</div>
+		<script type="text/events">
+		</script>
 		<script>
-			window.onload = function() {
-				var nodes = [
-					{
-						'name': '2010',
-						'subnodes': [
-							{
-								'name': '5月',
-								'icon' : 'icon1.png',
-								'description' : '掌上纵横公司成立，<br/>创立业务品牌'
-							}
-						]
-					},
-					{
-						'name': '2011',
-						'subnodes': [
-							{
-								'name': '5月',
-								'icon' : '',
-								'description' : '签约中影集团影视版权<br/>手游独家战略合作伙伴'
-							},
-							{
-								'name': '7月',
-								'icon' : '',
-								'description' : '签约腾讯游戏影视版权<br/>手游独家战略合作伙伴'
-							}
-						],
+			$(document).ready(function(){
+				var yearHeight = 100;
+				var eventHeight = 80;
+				var totalHeight = 0;
+				var eventPoints = [];
+				var lastYear = '';
+				$(".event").each(function(i, item){
+					var year = $(item).attr('data-year');
+					var month = $(item).attr('data-month');
+					if(lastYear != year) {
+						lastYear = year;
+						totalHeight += yearHeight;
+						eventPoints.push({'type':'year','value':year, 'text': year, 'top': totalHeight});
 					}
-				];
-				
-				var allNodes = 0;
-				$.each(nodes, function(i,item){
-					allNodes ++;
-					allNodes += item.subnodes.length;
+					totalHeight += $(item).height() + eventHeight;
+					eventPoints.push({'type':'event', 'value': item, 'text': month + '月', 'top': totalHeight});
 				});
-			
-				var heightPer = 200;
-				var height = heightPer * allNodes;
 				
-				var paper = new Raphael(document.getElementById('about'), 1000, height);
-				paper.path([["M", 200, height], ["C", 300, height- 100, 300, height/2 + 100, 200, height / 2], ["S", 100, 100, 200, 10]]);
-
-
-				$.each(nodes, function(i, item){
-					var point = Raphael.getPointAtLength(path, length);
+				var paper = new Raphael(document.getElementById('about'), 1000, totalHeight + 120);
+				var pathParameter = [["M", 280, totalHeight], ["Q", 450, 3/4*totalHeight, 280, totalHeight/2], ["M", 280, totalHeight/2], ["Q", 110, 1/4*totalHeight, 280,20]];
+				var path = paper.path(pathParameter);
+				path.attr({
+					stroke : '#F57D07',
+					'stroke-width' : 2,
+					'stroke-linejoin' : 'round'
 				});
-			};
+				
+				
+				var totalPahLength = Raphael.getTotalLength(pathParameter);
+				
+				var pathLength = 0;
+				var _pathLength = 0;
+				var circleSet = paper.set();
+				$.each(eventPoints, function(i, item){
+					if(item.type == 'year') {
+						point = path.getPointAtLength(pathLength);
+						var circle = paper.circle(point.x, point.y, 27);
+						circle.data('point', point);
+						circle.attr({
+							'stroke-width' : 0,
+							fill: '#F57D07'
+						});
+						var text = paper.text(point.x, point.y, item.text);
+						text.attr({
+							'font-size': '16px',
+							'font-family': '"Microsoft YaHei","微软雅黑",SimSun,"宋体",sans-serif',
+							fill: '#fff'
+						});
+						pathLength = yearHeight / totalHeight * totalPahLength + _pathLength;
+					} else {
+						point = path.getPointAtLength(pathLength);
+						var circle = paper.circle(point.x, point.y, 6);
+						circle.data('point', point);
+						circle.attr({
+							'stroke-width' : 0,
+							fill: '#F57D07'
+						});
+						var text = paper.text(point.x + 50, point.y, item.text);
+						text.attr({
+							'font-size': '22px',
+							'font-family': '"Microsoft YaHei","微软雅黑",SimSun,"宋体",sans-serif',
+							fill: '#fff'
+						});
+						pathLength = (eventHeight + $(item.value).height()) / totalHeight * totalPahLength + _pathLength;
+						$(item.value).css('left', point.x + 100 + 'px');
+						$(item.value).css('top', point.y - 30 + 'px');
+						circle.data('event', item.value);
+					}
+					circleSet.push(circle);
+					_pathLength = pathLength;
+					
+				});
+				
+				var lastPoint = path.getPointAtLength(totalPahLength);
+				var arrow = paper.path('M0,0L22,0L11,20Z');
+				arrow.rotate(lastPoint.alpha, 0,0);
+				arrow.transform("t"+ (lastPoint.x-9) + "," + (lastPoint.y-20) + "r"+(lastPoint.alpha+90));
+				arrow.attr({
+					'stroke-width' : 0,
+					fill: '#F57D07'
+				});
+				
+				$(window).scroll(function(){
+					checkVisable();
+				});
+				
+				var maxScrollTop = $(document).height() - $(window).height();
+				var subPath;
+				var subPathParameter;
+				
+				function checkVisable(){
+					var scrollTop = $(this).scrollTop();
+					subPath && subPath.remove();
+					subPathParameter = path.getSubpath(0, (1 - (scrollTop) / maxScrollTop) * totalPahLength);
+					subPath = paper.path(subPathParameter);
+					subPath.attr({
+						stroke : '#ccc',
+						'stroke-width' : 2,
+						'stroke-linejoin' : 'round'
+					});
+					var subPathBBox = subPath.getBBox();
+					$.each(circleSet, function(i, item){
+						var point = item.data('point');
+						if(subPathBBox.y <= point.y - 1) {
+							item.attr({
+								'fill': '#ccc'
+							});
+							$(item.data('event')).fadeOut();
+						} else {
+							item.attr({
+								'fill': '#F57D07'
+							});
+							$(item.data('event')).fadeIn();
+						}
+					});
+				}
+				checkVisable();
+			});
 
 		</script>
 	</body>
