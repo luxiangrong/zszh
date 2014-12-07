@@ -31,16 +31,16 @@ $(function() {
 				// );
 				//
 				// }
-				if ('transform' in document.documentElement.style) {
-					var translate3dY = ($(window).scrollTop() - $(this).closest('.indexDiv').offset().top) / 2 + 200;
-					console.log(translate3dY);
-					$(this).css('transform', 'translate3d(0px, ' + translate3dY + 'px, 0px)');
-				} else if ('-webkit-transform' in document.documentElement.style) {
-					var translate3dY = ($(window).scrollTop() - $(this).closest('.indexDiv').offset().top) / 2 + 200;
-					$(this).css('-webkit-transform', 'translate3d(0px, ' + translate3dY + 'px, 0px)');
-				} else {
-					$(this).css('top', ($(window).scrollTop() - $(this).closest('.indexDiv').offset().top) / 2 + 200);
-				}
+				// if ('transform' in document.documentElement.style) {
+					// var translate3dY = ($(window).scrollTop() - $(this).closest('.indexDiv').offset().top) / 2 + 200;
+					// console.log(translate3dY);
+					// $(this).css('transform', 'translate3d(0px, ' + translate3dY + 'px, 0px)');
+				// } else if ('-webkit-transform' in document.documentElement.style) {
+					// var translate3dY = ($(window).scrollTop() - $(this).closest('.indexDiv').offset().top) / 2 + 200;
+					// $(this).css('-webkit-transform', 'translate3d(0px, ' + translate3dY + 'px, 0px)');
+				// } else {
+					// $(this).css('top', ($(window).scrollTop() - $(this).closest('.indexDiv').offset().top) / 2 + 200);
+				// }
 			});
 		});
 	}

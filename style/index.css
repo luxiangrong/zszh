@@ -5,8 +5,8 @@
 .indexDiv h1 div{padding:100px 0 30px 0;}
 
 .indexPart1{background:#000; z-index:30;}
-.indexPart1 ul{width:110%;}
-.indexPart1 li{float:left; width:180px; height:180px; overflow:hidden; position:relative;}
+.indexPart1 ul{width:150%; position: absolute; float: left;}
+.indexPart1 li{float:left; width:180px; height:180px; overflow:hidden;;}
 
 .indexImg{position:fixed; z-index:50; left:50%; margin-left:-361px; top:240px;}
 
