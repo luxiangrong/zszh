@@ -517,16 +517,17 @@
 		</div>
 		<script>
 			$(document).ready(function() {
-				$(window).smoothScroll({
-					step : 50, //每次滚轮事件，页面滚动的距离
-					during : 1000,
-					easing : 'easeOutCubic',
-				});
-				
+				if($.browser.msie && $.browser.version <= 9) {
+				} else {
+					$(window).smoothScroll({
+						step : 50, //每次滚轮事件，页面滚动的距离
+						during : 1000,
+						easing : 'easeOutCubic',
+					});
+				}
+
 				$(window).stellar();
-				
-				$(".indexPart1").stellar({
-				});
+
 			});
 		</script>
 	</body>

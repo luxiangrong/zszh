@@ -98,7 +98,7 @@
 .Business_3 .name{font-size:24px; color:#FFF; line-height:130px; position:absolute; z-index:10; top:125px; width:150%; left:-25%;}
 .Business_3 .nameNow{width:250px; left:50%; margin-left:-500px;}
 .Business_3 .list{position:relative; z-index:2;}
-.Business_3 .list li{float:left; height:145px; padding-right:35px; overflow:hidden;}
+.Business_3 .list li{float:left; height:145px; padding-right:35px;}
 .Business_3 .list .fr{padding:70px 0 0 390px;}
 
 .Business_4{height:500px; width:100%; overflow:hidden; background:#eee; position:relative;}
@@ -106,9 +106,7 @@
 .Business_4 .name{font-size:24px; line-height:130px; position:absolute; z-index:10; top:175px; width:150%; right:-25%;}
 .Business_4 .nameNow{width:250px; right:50%; margin-right:-500px;}
 .Business_4 .list{padding-top:150px; width:640px; position:relative; z-index:1;}
-.Business_4 .list li{float:left; height:130px; padding-right:35px; overflow:hidden;}
-
-
+.Business_4 .list li{float:left; height:130px; padding-right:35px;}
 
 
 

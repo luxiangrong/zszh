@@ -48,6 +48,9 @@
 
 	$.fn.smoothScroll = function (options) {
 		var opts = $.extend({}, $.fn.smoothScroll.defaults, options);
+		if(isFF) {
+			return;
+		}
 		return $(this).each(function () {
 			var $this = $(this);
 			_scrollable($this).on(isFF?'DOMMouseScroll':'mousewheel', function(e){
